@@ -979,10 +979,10 @@
 	}
 
 /*********************************************************************************/
-/* Tweet                                                                         */
+/* Quote                                                                         */
 /*********************************************************************************/
 	
-	#tweet
+	#quote
 	{
 		position: relative;
 		text-align: center;
@@ -991,7 +991,7 @@
 		background-size: cover;
 	}
 
-		#tweet:before
+		#quote:before
 		{
 			content: '';
 			position: absolute;
@@ -1002,14 +1002,14 @@
 			background: rgba(64,64,64,0.5);
 		}
 	
-		#tweet section
+		#quote section
 		{
 			border-top: 1px solid;
 			border-bottom: 1px solid;
 			border-color: rgba(255,255,255,.1);
 		}
 
-		#tweet blockquote
+		#quote blockquote
 		{
 			position: relative;
 			border: none;

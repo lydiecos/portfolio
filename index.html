@@ -31,8 +31,8 @@
 					<ul>
 						<li class="active"><a href="index.html">Homepage</a></li>
 						<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
-						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li> -->
+						<li><a href="right-sidebar.html">Right Sidebar</a></li> -->
+						<li><a href="contact.html">Contact me</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -50,28 +50,28 @@
 		<div id="featured">
 			<div class="container">
 				<header>
-					<h2>Welcome</h2>
+					<h2>{{ Title }}</h2>
 				</header>
-				<p>This is the programming portfolio of <strong>Lydie Costes</strong> </p>
+				<p>{{ Subtitle }}</p>
 		</div>
 		<hr />
 				<div class="row">
 					<section class="4u">
 						<p><a href="#" class="image full"><img src="images/taylor-ann-wright-417893-unsplash.jpg" alt="woman dancing in a field as the sun sets. Photo by Taylor Ann Wright on Unsplash"/></a></p>
-						<h3>Project 1</h3>
-						<p>Will go here</p>
+						<h3>{{ Feature1 }}</h3>
+						<p>{{ Subfeature1 }}</p>
 						<a href="#" class="button button-style1">Read More</a>
 					</section>
 					<section class="4u">
 						<p><a href="#" class="image full"><img src="images/rodion-kutsaev-101716-unsplash.jpg" alt="stone steps partially obscured by climbing vines. Photo by Rodion Kutsaev on Unsplash"/></a></p>
-						<h3>Project 2</h3>
-						<p>Will go here.</p>
+						<h3>{{ Feature2 }}</h3>
+						<p>{{ Subfeature2 }}</p>
 						<a href="#" class="button button-style1">Read More</a>
 					</section>
 					<section class="4u">
 						<p><a href="#" class="image full"><img src="images/elaine-casap-86020-unsplash.jpg" alt="four hands holding a bowl of cherry tomatoes. Photo by Elaine Casap on Unsplash"/></a></p>
-						<h3>Project 3</h3>
-						<p>Will go here.</p>
+						<h3>{{ Feature3 }}</h3>
+						<p>{{ Subfeature3 }}</p>
 						<a href="#" class="button button-style1">Read More</a>
 					</section>
 
@@ -80,12 +80,12 @@
 				
 		</div>
 
-	<!-- Tweet -->
-	<div id="tweet">
+	<!-- Inspirational Quote -->
+	<div id="quote">
 		<div class="container">
 			<section>
-				<blockquote>&ldquo;To live and work attentively in a diverse landscape such as this one--made up of native woodlands, pastures, croplands, ponds, and streams--is to live from one revelation to another, things unexpected, always of interest, often wonderful.  After a while, you understand that there can be no end to this. The place is essentially interesting, inexhaustibly beautiful and wonderful. To know this is a defense against the incessant salestalk that is always telling you that what you have is not good enough; your life is not good enough. There aren't many right answers to that. One of them, one of the best, comes from living watchfully and carefully the life uniquely granted to you by your place: My life, thank you very much, is just fine.&rdquo;</blockquote>
-			<p style=color:azure;font-size:25px>-- Wendell Berry</p></section>
+				<blockquote>&ldquo;{{ Body }}&rdquo;</blockquote>
+			<p style=color:azure;font-size:25px>{{ Source }}</p></section>
 		</div>
 	</div>
 
@@ -97,16 +97,16 @@
 					<section class="6u">
 						<a href="#" class="image full"><img src="images/pic01.jpg" alt=""></a>
 						<header>
-							<h2>A Closer Embrace</h2>
+							<h2>{{ Item1 }}</h2>
 						</header>
-						<p><a href="http://www.facebook.com/acloserembrace" target="_blank"> Website here.</a></p>
+						<p><a href="http://www.facebook.com/acloserembrace" target="_blank">{{ Item1Link }}</a></p>
 					</section>				
 					<section class="6u">
 						<a href="#" class="image full"><img src="images/pic02.jpg" alt=""></a>
 						<header>
-							<h2>Triangle Zouk</h2>
+							<h2>{{ Item2 }}</h2>
 						</header>
-						<p><a href="https://trianglezouk.wixsite.com/trianglezouk" target="_blank"> Website here.</a></p>
+						<p><a href="https://trianglezouk.wixsite.com/trianglezouk" target="_blank">{{ Item2Link }}</a></p>
 					</section>				
 				</div>
 
@@ -114,16 +114,16 @@
 					<section class="6u">
 						<a href="#" class="image full"><img src="images/pic03.jpg" alt=""></a>
 						<header>
-							<h2>RDU Blues</h2>
+							<h2>{{ Item3 }}</h2>
 						</header>
-						<p><a href="http://www.rdublues.com" target="_blank">Website here.</a></p>
+						<p><a href="http://www.rdublues.com" target="_blank">{{ Item3Link }}</a></p>
 					</section>				
 					<section class="6u">
 						<a href="#" class="image full"><img src="images/pic04.jpg" alt=""></a>
 						<header>
-							<h2>Other things</h2>
+							<h2>{{ Item4 }}</h2>
 						</header>
-						<p>Located here.</p>
+						<p>{{ Item4Link }}</p>
 					</section>				
 				</div>
 			
@@ -135,13 +135,18 @@
 	<!-- Footer -->
 		<div id="footer">
 			<div class="container">
+				<section id=counting>
+					<p>{{ counter }}</p>
+					<img src="images/tyler-nix-608482-unsplash.jpg"  @click="increment" height="100" width="100" alt="Two people high fiving in front of a sunset. Courtesy of Tyler Nix @ Unsplash">
+					<p>{{ Hifive }}</p>
+				</section>
 				<section>
 					<header>
-						<h2>Get in touch</h2>
-						<span class="byline">lydiecostes@gmail.com</span>
+						<!-- <h2>Get in touch</h2> -->
+						<span class="byline">Get in touch</span>
 					</header>
 					<ul class="contact">
-						<!-- <li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li> -->
+						<li><a href="contact.html" class="fa fa-envelope"><span>Email</span></a></li>
 						<li class="active"><a href="https://www.facebook.com/acloserembrace" target="_blank" class="fa fa-facebook"><span>Facebook</span></a></li>
 						<li><a href="http://instagram.com/acloserembrace" target="_blank" class="fa fa-instagram"><span>Pinterest</span></a></li>
 						<!-- <li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li> -->
@@ -158,4 +163,6 @@
 		</div>
 
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./vue.js"></script>
 </html>

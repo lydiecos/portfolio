@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Linear by TEMPLATED</title>
+		<title>Lydie Costes</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -30,9 +30,9 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Homepage</a></li>
-						<li><a href="left-sidebar.html">Left Sidebar</a></li>
-						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li class="active"><a href="no-sidebar.html">No Sidebar</a></li>
+						<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+						<li><a href="right-sidebar.html">Right Sidebar</a></li> -->
+						<li class="active"><a href="contact.html">Contact me</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -40,16 +40,62 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1><a href="#">Linear</a></h1>
+					<h1><a href="#">{{ Title }}</a></h1>
 					<span class="tag">By TEMPLATED</span>
 				</div>
 			</div>
 		</div>
 	<!-- Header --> 
 
-	<!-- Main -->
-		<div id="main">
-			<div id="content" class="container">
+	<!-- Main Contact Form-->
+		<section id="main"> 
+			<div class="container">
+				<h3>Contact Me</h3>
+				<form method="post" action="#" id="signup-form">
+					<div class="row uniform">
+						<div class="6u 12u(xsmall)">
+							<input type="text"
+								name="name"
+								v-model="name"
+								id="name">
+						</div>
+						<div class="6u 12u(xsmall)">
+							<input type="email"
+								name="email"
+								v-model="email"
+								id="email">
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="12u">
+							<input type="text"
+								name="subject"
+								v-model="subject"
+								id="subject">
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="12u">
+							<textarea
+								name="message"
+								v-model="message"
+								id="message"
+								rows="6"></textarea>
+						</div>
+					</div>
+					<div class="row uniform">
+							<div class="12u">
+								<ul class="actions">
+									<li><input type="submit" class="special" value="Send Message" /></li>
+									<li><input type="reset" value="Reset Form" /></li>
+								</ul>
+							</div>
+						</div>
+				</form>
+			</div>
+		</section>
+
+			<!-- <div id="content" class="container">
 				<section>
 					<header>
 						<h2>No Sidebar</h2>
@@ -60,12 +106,12 @@
 					<p>Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus.</p>							
 
 				</section>
-			</div>
-		</div>
-	<!-- /Main -->
+			</div> -->
+		</div> 
+
 
 	<!-- Tweet -->
-		<div id="tweet">
+		<div id="quote">
 			<div class="container">
 				<section>
 					<blockquote>&ldquo;In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat.&rdquo;</blockquote>
@@ -83,10 +129,10 @@
 						<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
 					</header>
 					<ul class="contact">
-						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-						<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-						<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
-						<li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li>
+						<li><a href="contact.html" class="fa fa-envelope"><span>Twitter</span></a></li>
+						<li class="active"><a href="https://www.facebook.com/acloserembrace" target="_blank" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="http://www.instagram.com/acloserembrace" target ="_blank" class="fa fa-dribbble"><span>Pinterest</span></a></li>
+						<!-- <li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li> -->
 					</ul>
 				</section>
 			</div>
@@ -102,4 +148,6 @@
 
 
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./vue.js"></script>
 </html>
